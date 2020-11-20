@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'medicartapp',
     'rest_framework',
     'corsheaders',
-    'core',
+    
 ]
 
 MIDDLEWARE = [
