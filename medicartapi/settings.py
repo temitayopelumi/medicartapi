@@ -24,8 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '9y07_szlvgbper52ng)it7o#94jf_4d8^44#9=*(v_6vtq*nqg'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
-
+DEBUG = True
 ALLOWED_HOSTS = ['medicartapp.herokuapp.com','127.0.0.1']
 
 # Application definition
@@ -40,8 +39,11 @@ INSTALLED_APPS = [
     'medicartapp',
     'rest_framework',
     'corsheaders',
+    'rest_framework.authtoken',
     
 ]
+
+AUTH_USER_MODEL = 'medicartapp.Account'
 
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
@@ -128,6 +130,11 @@ MEDIA_URL = '/images/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 MEDIA_ROOT=os.path.join(BASE_DIR, 'img/images')
 
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.BasicAuthentication',
+    ]
+}
 
 
 CORS_ORIGIN_WHITELIST = ["http://localhost:3000",]
