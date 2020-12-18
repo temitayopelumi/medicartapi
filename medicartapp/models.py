@@ -23,7 +23,6 @@ class Product(models.Model):
     CATEGORY = (
         ('Baby and Child health', 'Baby and Child health'),
         ('Treatments and Medicaments','Treatments and Medicaments'),
-        ('Treatments and Medicaments','Treatments and Medicaments'),
         ('First Aid','First Aid'),
         ('Sexual Wellbeing', 'Sexual Wellbeing', ),
         ('Personal Care', 'Personal Care'),

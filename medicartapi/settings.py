@@ -25,7 +25,7 @@ SECRET_KEY = '9y07_szlvgbper52ng)it7o#94jf_4d8^44#9=*(v_6vtq*nqg'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-ALLOWED_HOSTS = ['medicartapp.herokuapp.com','127.0.0.1']
+ALLOWED_HOSTS = ['medicartapi.herokuapp.com','127.0.0.1']
 
 # Application definition
 
@@ -140,5 +140,4 @@ REST_FRAMEWORK = {
     
 }
 
-
-CORS_ORIGIN_WHITELIST = ["http://localhost:3000",]
+CORS_ORIGIN_ALLOW_ALL = True
